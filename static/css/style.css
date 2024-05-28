@@ -1,0 +1,80 @@
+body {
+    background-color: #1159D2;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff; /* Adiciona cor de texto padrão para contraste */
+}
+
+.central {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Faz com que o contêiner central ocupe a altura total da viewport */
+    padding: 20px; /* Adiciona espaço ao redor */
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Permite quebra de linha para elementos filhos */
+}
+
+.conteudo, .geral {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px; /* Limita a largura máxima para melhor legibilidade */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
+    padding: 20px; /* Adiciona espaço interno */
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente para destacar o conteúdo */
+    border-radius: 10px; /* Canto arredondado */
+    margin: 10px; /* Adiciona espaço entre blocos */
+}
+
+.conteudo h1, .conteudo h3, .geral h2 {
+    margin: 10px 0; /* Adiciona espaçamento entre os cabeçalhos */
+    text-align: center; /* Centraliza o texto */
+}
+
+.conteudo button {
+    background-color: #fff;
+    color: #1159D2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Centraliza o texto do botão */
+    display: block;
+    width: fit-content; /* Ajusta a largura do botão ao conteúdo */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.conteudo button:hover {
+    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+}
+
+.geral img {
+    max-width: 80%; /* Reduz a largura máxima da imagem */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espaço inferior para separação visual */
+}
+
+.geral h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .central {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+        align-items: center;
+    }
+
+    .geral {
+        order: -1; /* Move a imagem para o topo em telas menores */
+    }
+}
